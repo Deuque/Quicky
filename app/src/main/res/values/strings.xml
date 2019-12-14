@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">On-Screen Helper</string>
+    <string name="tab_text_1">Clipboard</string>
+    <string name="tab_text_2">Dictionary</string>
+    <string name="m1">copy</string>
+    <string name="m2">delete</string>
+    <string name="m3">paste</string>
+</resources>

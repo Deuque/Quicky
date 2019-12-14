@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="300dp"
+    android:layout_height="260dp"
+    android:paddingTop="3dp"
+    android:id="@+id/diclayout">
+
+    <AutoCompleteTextView
+        android:id="@+id/text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg2"
+        android:backgroundTint="@color/aux5"
+        android:fontFamily="@font/source_sans_pro"
+        android:textSize="13sp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:padding="10dp"
+        android:hint="Say the word!"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textIsSelectable="true"
+        android:cursorVisible="true"/>
+    <ImageButton
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg1"
+        android:backgroundTint="@color/aux4"
+        android:src="@drawable/search"
+        android:tint="@color/aux1"
+        android:gravity="center"
+        android:padding="6dp"
+        android:layout_toEndOf="@id/text"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="8dp"/>
+    <ImageButton
+        android:id="@+id/speak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg1"
+        android:backgroundTint="@color/aux6"
+        android:src="@drawable/speak"
+        android:tint="@color/aux1"
+        android:gravity="center"
+        android:padding="6dp"
+        android:layout_toEndOf="@id/search"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="9dp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/source_sans_pro"
+        android:hint=""
+        android:scrollbars="vertical"
+        android:textAlignment="viewStart"
+        android:textColor="@color/aux2"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:layout_marginEnd="3dp"/>
+
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/searchword"
+            android:alpha="0.6"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result will show here."
+            android:fontFamily="@font/poppins"/>
+    </LinearLayout>
+</RelativeLayout>

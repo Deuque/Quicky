@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow1"
+    android:padding="5dp"
+    android:layout_margin="5dp">
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="4dp"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/colorPrimary"
+        android:text="Remember to read your expectopatrona by noon today, it shou;dnt pass night sha"/>
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:fontFamily="@font/source_sans_pro"
+        android:textColor="@color/aux2"
+        android:text="6:54pm"
+        android:layout_gravity="end"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"/>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="300dp"
+    android:layout_height="260dp"
+    android:paddingTop="3dp"
+    android:id="@+id/notlayout">
+
+    <AutoCompleteTextView
+        android:id="@+id/notetext"
+        android:layout_width="251dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg2"
+        android:backgroundTint="@color/aux5"
+        android:fontFamily="@font/source_sans_pro"
+        android:textSize="13sp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:padding="13dp"
+        android:hint="Got something to save?"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+    <ImageButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg1"
+        android:backgroundTint="@color/aux4"
+        android:src="@drawable/add"
+        android:tint="@color/aux1"
+        android:gravity="center"
+        android:padding="6dp"
+        android:layout_toEndOf="@id/notetext"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="5dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@id/notetext"></androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

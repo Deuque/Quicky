@@ -26,6 +26,13 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.github.piruin:quickaction:2.4.3'
+    implementation 'com.github.IslamKhSh:CardSlider:0.4'
+    implementation 'com.github.armcha:ElasticView:0.2.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.16'
+    implementation 'com.github.emrekose26:CopyExternalDB:1.0.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.elconfidencial.bubbleshowcase:bubbleshowcase:1.3.1'
+
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'

@@ -16,7 +16,7 @@ public class DatabaseClass extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table notes  (id INTEGER PRIMARY KEY AUTOINCREMENT,texts TEXT,time TEXT)");
-
+        db.execSQL("create table dictionary  (id INTEGER PRIMARY KEY AUTOINCREMENT,word TEXT,meaning TEXT)");
     }
 
     @Override
@@ -36,6 +36,18 @@ public class DatabaseClass extends SQLiteOpenHelper {
             return false;
         }
    }
+    public boolean insertIntoDic(String word,String meaning){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("word", word);
+        cv.put("meaning", meaning);
+        long result = db.insert("dictionary",null,cv);
+        if(result==-1){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public Cursor getDur(int id){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.rawQuery("Select duration from medications where id=?", new String[]{String.valueOf(id)} );
@@ -43,6 +55,18 @@ public class DatabaseClass extends SQLiteOpenHelper {
     public Cursor getNotesData(){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.rawQuery("Select * from notes", null );
+    }
+    public Cursor getDicWords(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.rawQuery("Select word from dictionary", null );
+    }
+    public Cursor getMeaning(String word){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.rawQuery("Select meaning from dictionary where word=?", new String[]{word} );
+    }
+    public Cursor getDicData(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.rawQuery("Select * from dictionary", null );
     }
     public int deleteData(int id){
         SQLiteDatabase db = this.getWritableDatabase();

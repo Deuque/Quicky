@@ -1,8 +1,12 @@
 <resources>
-    <string name="app_name">On-Screen Helper</string>
+    <string name="app_name">Quicky</string>
     <string name="tab_text_1">Clipboard</string>
     <string name="tab_text_2">Dictionary</string>
     <string name="m1">copy</string>
     <string name="m2">delete</string>
     <string name="m3">paste</string>
+    <string name="i1">Quickly look up word meanings.</string>
+    <string name="i2">Listen to word pronunciations quickly.</string>
+    <string name="i3">Experience multitasking with the floating window, show or hide with icon tap.</string>
+    <string name="i4">Safe and easy to use.</string>
 </resources>

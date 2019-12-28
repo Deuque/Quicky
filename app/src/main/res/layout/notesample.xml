@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<io.armcha.elasticview.ElasticView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/elasticView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="0dp"
+    app:cardElevation="0dp"
+    app:flexibility="5"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="12dp"
+    android:theme="@style/AppTheme"
+    android:background="@android:color/transparent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/shadow1"
     android:padding="5dp"
-    android:layout_margin="5dp">
+    >
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
@@ -16,7 +29,7 @@
         android:textSize="13sp"
         android:fontFamily="@font/poppins"
         android:textColor="@color/colorPrimary"
-        android:text="Remember to read your expectopatrona by noon today, it shou;dnt pass night sha"/>
+        android:text=""/>
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
@@ -30,3 +43,4 @@
         android:layout_marginBottom="4dp"/>
 
 </LinearLayout>
+</io.armcha.elasticview.ElasticView>

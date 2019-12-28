@@ -3,22 +3,39 @@
     android:orientation="horizontal" android:layout_width="300dp"
     android:layout_height="260dp"
     android:paddingTop="3dp"
+    android:theme="@style/AppTheme"
     android:id="@+id/notlayout">
 
+    <RelativeLayout
+        android:id="@+id/notextlayout"
+        android:layout_width="251dp"
+        android:background="@drawable/bg2"
+        android:backgroundTint="@color/aux5"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
     <AutoCompleteTextView
         android:id="@+id/notetext"
-        android:layout_width="251dp"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
         android:background="@drawable/bg2"
         android:backgroundTint="@color/aux5"
         android:fontFamily="@font/source_sans_pro"
         android:textSize="13sp"
         android:textColor="@color/colorPrimary"
         android:textColorHint="@color/colorPrimary"
-        android:padding="13dp"
+        android:padding="4dp"
         android:hint="Got something to save?"
-        android:maxLines="1"
         android:ellipsize="end"/>
+        <ImageView
+            android:id="@+id/ct2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/canceltext"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
     <ImageButton
         android:id="@+id/add"
         android:layout_width="wrap_content"
@@ -29,7 +46,7 @@
         android:tint="@color/aux1"
         android:gravity="center"
         android:padding="6dp"
-        android:layout_toEndOf="@id/notetext"
+        android:layout_toEndOf="@id/notextlayout"
         android:layout_marginTop="6dp"
         android:layout_marginStart="5dp"/>
 
@@ -38,5 +55,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
-        android:layout_below="@id/notetext"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_below="@id/notextlayout"></androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>
